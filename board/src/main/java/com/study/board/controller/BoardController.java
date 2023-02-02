@@ -1,5 +1,7 @@
 package com.study.board.controller;
 
+import com.study.board.entity.Board;
+import lombok.Data;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,10 +18,10 @@ public class BoardController {
 
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(String title, String content){
+    public String boardWritePro(Board board){
 
-        System.out.println(title);
-        System.out.println(content);
+        System.out.println(board.getTitle());
+        System.out.println(board.getContent());
 
 
         return "";
