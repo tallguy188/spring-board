@@ -30,4 +30,10 @@ public class BoardService {
 
         return boardRepository.findById(id).get(); // findbyid는 값을 optional로 받아옴.
     }
+
+    // 게시글 삭제처리
+    public void boardDelete(Integer id) {
+        boardRepository.deleteById(id);
+
+    }
 }
