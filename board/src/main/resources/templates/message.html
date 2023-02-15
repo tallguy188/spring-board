@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+<script th:inline="javascript">   <!--컨트롤러에서 전송받은 메시지를 담아서 문구를 출력 -->
+
+    /*<![CDATA[*/
+
+    var message = [[${message}]];
+    alert(message);
+    location.replace([[${searchUrl}]]);
+
+    /*]]>*/
+</script>
 <body>
 
 </body>

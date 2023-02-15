@@ -23,12 +23,16 @@ public class BoardController {
 
 
     @PostMapping("/board/writepro")  // GetMapping은 경로를 설정
-    public String boardWritePro(Board board){
+    public String boardWritePro(Board board , Model model){
 
       boardService.write(board);
 
+      model.addAttribute("message","글작성이 완료되었습니다.");
+        model.addAttribute("searchUrl","/board/list");
 
-        return "";
+
+
+        return "message";
     }
 
     @GetMapping("/board/list")
